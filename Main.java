@@ -25,6 +25,10 @@ public class Main
                                 arrayList2D = Reader.compareQuests(filePath, filePathNewQuest);
                                 break;
                             case 2:
+                                if (allMergedQuest.isEmpty()) {
+                                    System.out.println("The list is empty");
+                                    break;
+                                }
                                 allMergedQuest = arrayList2D.get(0);
                                 Collections.sort(allMergedQuest);
                                 for(String element : allMergedQuest){
@@ -32,6 +36,10 @@ public class Main
                                 }
                                 break;
                             case 3:
+                                if (allNewQuest.isEmpty()) {
+                                    System.out.println("The list is empty");
+                                    break;
+                                }
                                 allNewQuest = arrayList2D.get(1);
                                 Collections.sort(allNewQuest);
                                 for(String element : allNewQuest){
