@@ -5,7 +5,7 @@ all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
 PROJECT TITLE:
-PURPOSE OF PROJECT:
+PURPOSE OF PROJECT: To compare new quest from old quest and add/merge the new quests to the file
 VERSION or DATE:
 HOW TO START THIS PROJECT:
 AUTHORS:
