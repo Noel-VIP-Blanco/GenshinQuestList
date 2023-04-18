@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Reader
+comment1.params=filePath\ filePathNewQuest
+comment1.target=java.util.ArrayList\ compareQuests(java.lang.String,\ java.lang.String)
+numComments=2
