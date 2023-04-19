@@ -5,8 +5,6 @@ public class Main
 {
     public static void main(String[] args){
         Scanner scannerInt = new Scanner(System.in);
-        String filePathNewQuest = "Quests/0NEWQUEST.txt";
-        String filePath = "Quests/2Dragonspine.txt";
         PrintMenu.printMenu();
         int choice = scannerInt.nextInt();
         while(true){
@@ -15,45 +13,7 @@ public class Main
                     break;
                 case 2:
                     PrintMenu.printSecondChoice();
-                    int secondChoice = scannerInt.nextInt();
-                    ArrayList<ArrayList<String>> arrayList2D = new ArrayList<>();
-                    ArrayList<String> allMergedQuest = new ArrayList<>();
-                    ArrayList<String> allNewQuest = new ArrayList<>();
-                    while(true){
-                        switch(secondChoice){
-                            case 1:
-                                arrayList2D = Reader.compareQuests(filePath, filePathNewQuest);
-                                break;
-                            case 2:
-                                if (allMergedQuest.isEmpty()) {
-                                    System.out.println("The list is empty");
-                                    break;
-                                }
-                                allMergedQuest = arrayList2D.get(0);
-                                Collections.sort(allMergedQuest);
-                                for(String element : allMergedQuest){
-                                    System.out.println(element);
-                                }
-                                break;
-                            case 3:
-                                if (allNewQuest.isEmpty()) {
-                                    System.out.println("The list is empty");
-                                    break;
-                                }
-                                allNewQuest = arrayList2D.get(1);
-                                Collections.sort(allNewQuest);
-                                for(String element : allNewQuest){
-                                    System.out.println(element);
-                                }
-                                break;
-                            default:
-                                System.out.println("Invalid input");
-                                break;
-                        }
-                        PrintMenu.printSecondChoice();
-                        secondChoice = scannerInt.nextInt();
-                        if(secondChoice == 0) break;
-                    }
+                    DragonSpineQuest.dragonSpineQuest();
                     break;
                 case 3:
                     break;

@@ -13,7 +13,7 @@ public class PrintMenu
         System.out.println("7. Sumeru");
     }
     public static void printSecondChoice(){
-        System.out.println("MENU");
+        System.out.println("SECOND MENU");
         System.out.println("0. Quit");
         System.out.println("1. Compare Old Quest List to New Quest List");
         System.out.println("2. Display all merged Quest List");

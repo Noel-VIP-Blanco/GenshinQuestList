@@ -1,30 +1,39 @@
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.ArrayList;
-public class Reader
-{
-    public static ArrayList<ArrayList<String>> compareQuests(String filePath, String filePathNewQuest){
+public class Reader{
+    public static ArrayList<ArrayList<String>> compareQuests(String oldQuestFilePath, String newQuestFilePath){
         ArrayList<ArrayList<String>> arrayList2D = new ArrayList<>();
-        try {
-            ArrayList<String> allMergedQuest = new ArrayList<>();
-            ArrayList<String> allNewQuest = new ArrayList<>();
-            String line;
-            String lineNewQuest;
-            FileReader oldQuestReader = new FileReader(filePath);
+        try{
+            ArrayList<String> oldQuestArray = new ArrayList<>();
+            ArrayList<String> newQuestArray = new ArrayList<>();
+            String oldQuestPerLine;
+            String newQuestPerLine;
+            FileReader oldQuestReader = new FileReader(oldQuestFilePath);
             BufferedReader oldQuestOutput = new BufferedReader(oldQuestReader);
-            FileReader newQuestReader = new FileReader(filePathNewQuest);
+            FileReader newQuestReader = new FileReader(newQuestFilePath);
             BufferedReader newQuestOutput = new BufferedReader(newQuestReader);
             
-            while((line = oldQuestOutput.readLine()) != null){
-                allMergedQuest.add(line.trim());
-                if((lineNewQuest = newQuestOutput.readLine()) != null){
-                    allMergedQuest.add(lineNewQuest.trim());
-                    allNewQuest.add(lineNewQuest.trim());
+            while((oldQuestPerLine = oldQuestOutput.readLine()) != null){
+                oldQuestArray.add(oldQuestPerLine.trim());
+            }
+            while((newQuestPerLine = newQuestOutput.readLine()) != null){
+                newQuestArray.add(newQuestPerLine.trim());
+            }
+            //Filter new Quest from old quest
+            for(int x = 0; x < newQuestArray.size(); x++){
+                for(int y = 0; y < oldQuestArray.size(); y++){
+                    if(newQuestArray.get(x).equals(oldQuestArray.get(y))){
+                        newQuestArray.remove(x);
+                        x--;
+                        break;
+                    }
                 }
             }
-            arrayList2D.add(allMergedQuest);
-            arrayList2D.add(allNewQuest);
+            arrayList2D.add(oldQuestArray);
+            arrayList2D.add(newQuestArray);
             oldQuestOutput.close();
+            newQuestOutput.close();
         }
         catch (Exception e) {
             e.getStackTrace();
