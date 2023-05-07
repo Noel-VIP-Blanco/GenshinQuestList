@@ -33,7 +33,7 @@ public class Reader{
             arrayList2D.add(oldQuestArray);
             arrayList2D.add(newQuestArray);
             oldQuestOutput.close();
-            newQuestOutput.close();
+                
         }
         catch (Exception e) {
             e.getStackTrace();

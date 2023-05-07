@@ -1,12 +1,11 @@
 A Land Entombed
 Ah, Fresh Meat!
 In the Mountains
-Lost in the Snow	
-NEW QUEST 2
-NEW QUEST 3
-Low-Temperature Warning	
+Lost in the Snow
+Low-Temperature Warning
 The Festering Fang
 The Great Mountain Survey
 The Great Mountain Survey II
-NEW QUEST
-NEW QUEST 1
+NEW QUEST1
+NEW QUEST3
+NEW QUEST 7
