@@ -18,7 +18,7 @@ public class PrintMenu
         System.out.println("1. Compare Old Quest List to New Quest List");
         System.out.println("2. Display all merged Quest List");
         System.out.println("3. Display all newly added Quest List");
-        System.out.println("4. Save all merged added Quest List"); // save permanent
-        System.out.println("5. Save all newly/temp added Quest List\n"); // save temp
+        System.out.println("4. Save all merged added Quest List in Specific Region"); // save permanent
+        System.out.println("5. Save all newly/temp added Quest List on Filtered Quest .txt File\n"); // save temp
     }
 }
