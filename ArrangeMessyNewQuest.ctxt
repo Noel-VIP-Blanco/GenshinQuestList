@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=ArrangeMessyNewQuest
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
+comment1.params=
+comment1.target=void\ ArrangeJumbledNewQuest()
 numComments=2

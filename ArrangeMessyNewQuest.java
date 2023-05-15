@@ -5,7 +5,7 @@ import java.io.BufferedWriter;
 
 public class ArrangeMessyNewQuest
 {
-    public static void main(String[] args){
+    public static void ArrangeJumbledNewQuest(){
         String messed = "Quests/0NEWQUEST.txt";
         try{
             FileReader messyFile = new FileReader(messed);
@@ -38,5 +38,6 @@ public class ArrangeMessyNewQuest
         catch(Exception e){
             e.printStackTrace();
         }
+        
     }
 }

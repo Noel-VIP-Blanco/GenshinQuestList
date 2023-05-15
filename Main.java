@@ -45,6 +45,10 @@ public class Main
                     areaQuestFilePath = "Quests/7Sumeru.txt"; // Old Quest File
                     AreaQuest.areaQuest(areaQuestFilePath);
                     break;
+                case 8:
+                    ArrangeMessyNewQuest.ArrangeJumbledNewQuest();
+                    System.out.println("Arranged Quest Successfuly!");
+                    break;
                 default:
                     System.out.println("Invalid input");
                     break;
