@@ -45,7 +45,12 @@ public class Main
                     areaQuestFilePath = "Quests/7Sumeru.txt"; // Old Quest File
                     AreaQuest.areaQuest(areaQuestFilePath);
                     break;
-                case 8:
+                 case 8:
+                    PrintMenu.printSecondChoice();
+                    areaQuestFilePath = "Quests/8Fontaine.txt"; // Old Quest File
+                    AreaQuest.areaQuest(areaQuestFilePath);
+                    break;
+                case 100:
                     ArrangeMessyNewQuest.ArrangeJumbledNewQuest();
                     System.out.println("Arranged Quest Successfuly!");
                     break;
